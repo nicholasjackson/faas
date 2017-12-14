@@ -14,7 +14,7 @@ import (
 )
 
 // MakeAsyncReport makes a handler for asynchronous invocations to report back into.
-func MakeAsyncReport(metrics metrics.MetricOptions) http.HandlerFunc {
+func MakeAsyncReport(metrics metrics.Metrics) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		defer r.Body.Close()
 
